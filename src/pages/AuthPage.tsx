@@ -189,6 +189,7 @@ const AuthPage: React.FC = () => {
       axios({
         method: "POST",
         url: `${process.env.REACT_APP_API_HOST}/register`,
+        withCredentials: true,
         data: {
           email: authForm.email,
           password: authForm.password,
